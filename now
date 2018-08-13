@@ -1,0 +1,26 @@
+#!/usr/bin/env sh
+cd $PWD
+case "$1" in
+build)          docker-compose build;;
+shape)          docker-compose exec php sh -c "composer install -d /var/www/webapp";;
+operate)        docker-sync-stack start;;
+stop)           docker stop $(docker ps -q);;
+rm)             docker-compose down
+                docker-sync-stack clean;;
+test)           docker-compose exec php sh -c "cd /var/www/webapp && /var/www/webapp/vendor/bin/behat $2";;
+composer)       docker-compose exec php sh -c "cd /var/www/webapp && composer $2";;
+bin/console)    docker-compose exec php sh -c "cd /var/www/webapp && $1 $2 $3 $4";;
+ssh)            docker-compose exec "$2" sh;;
+
+behat)          docker-compose exec php sh -c "cd /var/www/webapp && /var/www/webapp/vendor/bin/behat $2 $3 $4 $5";;
+services)       docker service ps;;
+-h) echo "usage: now [-key]
+    -h:            help
+    test:          runs behat test inside container
+    rm:            clean docker stack
+    build:         builds docker container
+    operate:       run containers and docker-sync
+    ssh [service]: ssh into docker service
+    ";;
+*) now -h
+esac
