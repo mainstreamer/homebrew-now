@@ -11,4 +11,7 @@ class Now < Formula
   	bin.install "now"
     puts 'INSTALL SUCCESSFULL'
   end
+ test do
+ 	puts 'TEST OK'
+ end
 end
