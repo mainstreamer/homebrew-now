@@ -6,6 +6,7 @@ class Now < Formula
 
   bottle :unneeded
 
+  version "1.0"
   # def default_alluxio_conf
     # <<~EOS
       # alluxio.master.hostname=localhost
