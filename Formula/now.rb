@@ -7,51 +7,8 @@ class Now < Formula
   revision "1"
   bottle :unneeded
 
-  # def default_alluxio_conf
-    # <<~EOS
-      # alluxio.master.hostname=localhost
-    # EOS
-  # end
-
   def install
-  	 # system.
-  	 # cp Dir.glob("foo-*").first, "foo"
-  	 # mv Dir.glob("foo-*").first, "foo"
-     # bin.install "foo"
-
-
-     # my_dir = Dir["C:/Documents and Settings/user/Desktop/originalfiles/*.doc"]
-# my_dir.each do |filename|
-  # name = File.basename('filename', '.doc')[0,4]
-  # dest_folder = "C:/Documents and Settings/user/Desktop/destinationfolder/#{name}/"
   	bin.install "now"
-    # puts Dir.pwd
-    # FileUtils.cp('../now', '/usr/local/bin')
-# end
-    # doc.install Dir["docs/*"]
-    # libexec.install Dir["*"]
-    # bin.write_exec_script Dir["#{libexec}/bin/*"]
-
-    # rm_rf Dir["#{etc}/alluxio/*"]
-
-    # (etc/"alluxio").install libexec/"conf/alluxio-env.sh.template" => "alluxio-env.sh"
-    # ln_sf "#{etc}/alluxio/alluxio-env.sh", "#{libexec}/conf/alluxio-env.sh"
-
-    # defaults = etc/"alluxio/alluxio-site.properties"
-    # defaults.write(default_alluxio_conf) unless defaults.exist?
-    # ln_sf "#{etc}/alluxio/alluxio-site.properties", "#{libexec}/conf/alluxio-site.properties"
     puts 'INSTALL SUCCESSFULL'
   end
-
-#  def caveats; <<~EOS
-#    To configure alluxio, edit
-#      #{etc}/alluxio/alluxio-env.sh
-#      #{etc}/alluxio/alluxio-site.properties
-#  EOS
-#  end
-
- # test do
- 	# puts 'TEST OK'
-# system bin/"now", "version"
- # end
 end
