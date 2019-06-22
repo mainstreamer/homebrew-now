@@ -23,6 +23,7 @@ class Now < Formula
 # my_dir.each do |filename|
   # name = File.basename('filename', '.doc')[0,4]
   # dest_folder = "C:/Documents and Settings/user/Desktop/destinationfolder/#{name}/"
+    puts Dir.pwd
     FileUtils.cp('../now', '/usr/local/bin')
 # end
     # doc.install Dir["docs/*"]
