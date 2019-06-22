@@ -3,7 +3,8 @@ class Now < Formula
   homepage "https://mainstreamer.github.io/homebrew-now/"
   url "https://mainstreamer.github.io/homebrew-now/now"
   sha256 "a70c5ae06c7079de89458d18a3ebfde3a5edd3f0c8e671a432027270e3de9b91"
-  version "1.0"
+  version "0.1"
+  revision "1"
   bottle :unneeded
 
   # def default_alluxio_conf
@@ -23,8 +24,9 @@ class Now < Formula
 # my_dir.each do |filename|
   # name = File.basename('filename', '.doc')[0,4]
   # dest_folder = "C:/Documents and Settings/user/Desktop/destinationfolder/#{name}/"
-    puts Dir.pwd
-    FileUtils.cp('../now', '/usr/local/bin')
+  	bin.install "now"
+    # puts Dir.pwd
+    # FileUtils.cp('../now', '/usr/local/bin')
 # end
     # doc.install Dir["docs/*"]
     # libexec.install Dir["*"]
