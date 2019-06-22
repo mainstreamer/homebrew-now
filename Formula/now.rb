@@ -2,7 +2,7 @@ class Now < Formula
   desc "Open Source Docker Helper Utility"
   homepage "https://mainstreamer.github.io/homebrew-now/"
   url "https://mainstreamer.github.io/homebrew-now/now"
-  sha256 "a70c5ae06c7079de89458d18a3ebfde3a5edd3f0c8e671a432027270e3de9b91"
+  sha256 "09d71767e527abdf6fb21cc6ea36728d6a66a5f6fa9a6c51f6a280d6da1ef4a6"
   version "0.1"
   revision 1
   bottle :unneeded
