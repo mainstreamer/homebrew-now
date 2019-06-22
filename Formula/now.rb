@@ -3,10 +3,9 @@ class Now < Formula
   homepage "https://mainstreamer.github.io/homebrew-now/"
   url "https://mainstreamer.github.io/homebrew-now/now"
   sha256 "a70c5ae06c7079de89458d18a3ebfde3a5edd3f0c8e671a432027270e3de9b91"
-
+  version "1.0"
   bottle :unneeded
 
-  version "1.0"
   # def default_alluxio_conf
     # <<~EOS
       # alluxio.master.hostname=localhost
@@ -14,6 +13,18 @@ class Now < Formula
   # end
 
   def install
+  	 # system.
+  	 # cp Dir.glob("foo-*").first, "foo"
+  	 # mv Dir.glob("foo-*").first, "foo"
+     # bin.install "foo"
+
+
+     # my_dir = Dir["C:/Documents and Settings/user/Desktop/originalfiles/*.doc"]
+# my_dir.each do |filename|
+  # name = File.basename('filename', '.doc')[0,4]
+  # dest_folder = "C:/Documents and Settings/user/Desktop/destinationfolder/#{name}/"
+    FileUtils.cp('../now', '/usr/local/bin')
+# end
     # doc.install Dir["docs/*"]
     # libexec.install Dir["*"]
     # bin.write_exec_script Dir["#{libexec}/bin/*"]
@@ -36,8 +47,8 @@ class Now < Formula
 #  EOS
 #  end
 
- test do
- 	puts 'TEST OK'
+ # test do
+ 	# puts 'TEST OK'
 # system bin/"now", "version"
- end
+ # end
 end
