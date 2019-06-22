@@ -1,6 +1,12 @@
 #!/usr/bin/env sh
 cd $PWD
-source .now
+if test -f ".now"; then
+    source .now
+    echo "project config loaded successfully"
+else
+	echo "please add .now file"
+fi
+
 APP_PATH="$APP_PATH"
 REMOTE_HOST="$REMOTE_HOST"
 PROJECT_NAME="$PROJECT_NAME"
